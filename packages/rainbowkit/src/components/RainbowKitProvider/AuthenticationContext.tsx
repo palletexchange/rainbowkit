@@ -116,7 +116,7 @@ export function RainbowKitAuthenticationProvider<Message = unknown>({
       // equal to previous connector then logout
       if (connector?.uid !== currentConnectorUid) {
         setCurrentConnectorUid(undefined);
-        console.log('[RK] connectorUid', status, connector?.uid, currentConnectorUid)
+        console.log('[RK] connectorUid', status, connector?.uid, currentConnectorUid, connector)
         adapter.signOut();
       }
     }
