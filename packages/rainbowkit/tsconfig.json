@@ -1,6 +1,7 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "../../../tsconfig.json",
   "compilerOptions": {
+    "moduleResolution": "bundler",
     "module": "esnext",
     "target": "es2019",
     "preserveSymlinks": false,
