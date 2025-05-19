@@ -77,7 +77,7 @@ export function RainbowKitAuthenticationProvider<Message = unknown>({
       // Current connector uid only should be available only at "authenticated"
       setCurrentConnectorUid(undefined);
       console.log('[RK] account changed', data)
-      adapter.signOut();
+      // adapter.signOut();
     }
   };
 
