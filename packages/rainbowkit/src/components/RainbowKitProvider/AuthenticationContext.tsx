@@ -63,7 +63,7 @@ export function RainbowKitAuthenticationProvider<Message = unknown>({
   useAccountEffect({
     onDisconnect: () => {
       console.log('[RK] onDisconnect called')
-      adapter.signOut();
+      // adapter.signOut();
       setCurrentConnectorUid(undefined);
     },
   });
