@@ -73,6 +73,7 @@ export function RainbowKitSiweNextAuthProvider({
         },
 
         signOut: async () => {
+          console.log('[RK] signing out')
           await signOut({ redirect: false });
         },
 

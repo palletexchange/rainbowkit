@@ -62,7 +62,8 @@ export function RainbowKitAuthenticationProvider<Message = unknown>({
 
   useAccountEffect({
     onDisconnect: () => {
-      adapter.signOut();
+      console.log('[RK] onDisconnect called')
+      // adapter.signOut();
       setCurrentConnectorUid(undefined);
     },
   });
@@ -75,7 +76,8 @@ export function RainbowKitAuthenticationProvider<Message = unknown>({
       // If account is changed we automatically log user out.
       // Current connector uid only should be available only at "authenticated"
       setCurrentConnectorUid(undefined);
-      adapter.signOut();
+      console.log('[RK] account changed', data)
+      // adapter.signOut();
     }
   };
 
@@ -114,7 +116,8 @@ export function RainbowKitAuthenticationProvider<Message = unknown>({
       // equal to previous connector then logout
       if (connector?.uid !== currentConnectorUid) {
         setCurrentConnectorUid(undefined);
-        adapter.signOut();
+        console.log('[RK] connectorUid', status, connector?.uid, currentConnectorUid, connector)
+        // adapter.signOut();
       }
     }
   }, [connector?.emitter, currentConnectorUid, status]);
